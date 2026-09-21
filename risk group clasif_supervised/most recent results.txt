@@ -1,0 +1,21 @@
+Training cohort after biological filtering: 69724 records (from 70000); external validation cohort: 219 patients, 114 CVD-positive.
+Fitting UMAP (7D) on the training cohort ...
+UMAP done.
+LightGBM+PCA       hits=157/219 acc=71.69% CI=[65.8, 77.6] sens=71.1 spec=72.4 AUC=0.835 Brier=0.169 calib(slope,int)=(1.179,-0.044)
+LightGBM+UMAP      hits=160/219 acc=73.06% CI=[67.1, 79.0] sens=73.7 spec=72.4 AUC=0.827 Brier=0.174 calib(slope,int)=(1.184,-0.014)
+XGBoost+PCA        hits=158/219 acc=72.15% CI=[66.7, 78.1] sens=72.8 spec=71.4 AUC=0.835 Brier=0.169 calib(slope,int)=(1.211,-0.04)
+XGBoost+UMAP       hits=154/219 acc=70.32% CI=[64.4, 76.7] sens=75.4 spec=64.8 AUC=0.821 Brier=0.175 calib(slope,int)=(1.143,-0.014)
+RandomForest+PCA   hits=161/219 acc=73.52% CI=[67.6, 79.5] sens=72.8 spec=74.3 AUC=0.846 Brier=0.165 calib(slope,int)=(1.369,-0.034)
+RandomForest+UMAP  hits=163/219 acc=74.43% CI=[68.9, 79.9] sens=72.8 spec=76.2 AUC=0.839 Brier=0.168 calib(slope,int)=(1.245,-0.016)
+
+Paired McNemar (UMAP vs PCA):
+   LightGBM+UMAP vs LightGBM+PCA {'a_right_b_wrong': 10, 'a_wrong_b_right': 7, 'p_value': 0.6291}
+   XGBoost+UMAP vs XGBoost+PCA {'a_right_b_wrong': 9, 'a_wrong_b_right': 13, 'p_value': 0.5235}
+   RandomForest+UMAP vs RandomForest+PCA {'a_right_b_wrong': 9, 'a_wrong_b_right': 7, 'p_value': 0.8036}
+
+Identical prediction vectors: none (all six are distinct)
+
+Clustering feature columns (note: 'cardio' is absent): ['age', 'gender', 'height', 'weight', 'ap_hi', 'cholesterol', 'gluc', 'smoke', 'alco', 'active']
+Silhouette (train) by k: {2: 0.194, 3: 0.199, 4: 0.21, 5: 0.227, 6: 0.228, 7: 0.213, 8: 0.183}
+Silhouette (valid) by k: {2: 0.188, 3: 0.203, 4: 0.211, 5: 0.212, 6: 0.218, 7: 0.234, 8: 0.219}
+Bootstrap ARI k=5 (validation cohort): mean=0.684 sd=0.155
