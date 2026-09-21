@@ -8,6 +8,13 @@ This project implements a comprehensive Machine Learning pipeline for data analy
 ## 2. Environment Requirements
 *   Language: Python 3.14
 *   Execution Environment: Jupyter Notebook (.ipynb)
+*   numpy >= 1.26
+*   pandas  >= 2.0
+*   scipy >= 1.11
+*   scikit-learn >= 1.3
+*   lightgbm >= 4.0
+*   xgboost >= 2.0
+*   umap-learn >= 0.5.5
 
 # Dependencies and Libraries
 To run this project, make sure to install the following libraries:
