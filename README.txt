@@ -6,7 +6,7 @@
 This project implements a comprehensive Machine Learning pipeline for data analysis, dimensionality reduction, clustering, and predictive classification. It is specifically designed to run in Jupyter Notebook environments. The workflow covers everything from data cleaning and scaling, through feature extraction (PCA, t-SNE, UMAP), to phenotype definition using K-Means and the training of ensemble algorithms (Random Forest, LightGBM, XGBoost) for outcome prediction, ensuring a rigorous metric evaluation scheme. KNN methodology utilizes NaN-Euclidean distance to calculate patient similarity vectors in incomplete multidimensional spaces.
 
 IMPORTANT NOTE: supervised and reduction methodology.ipynb ---> first methodology and results with accuracy, ROC, f1-Score
-                most recent run_validation_metrics.py ---->  newest results with versions below and new metrics for validation (MCNemar)  
+                most recent run_validation_metrics.py ----> newest results with versions below and new metrics for validation (McNemar, sensitivity, Specificity)  
 
 ## 2. Environment Requirements
 *   Language: Python 3.14
