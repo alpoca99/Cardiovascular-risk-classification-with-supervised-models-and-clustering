@@ -86,5 +86,7 @@ To ensure there are no data dependency errors (such as data leakage), the Jupyte
 *   Main libraries: RandomForestClassifier, LGBMClassifier, xgboost, classification_report, confusion_matrix, accuracy_score.
 *   Output: Confusion matrices, final metrics report (Accuracy, Precision, Recall, F1-Score), and the optimized final model ready for production.
 
+### [5] 05_power_analysis.py
+***  Power analysis added: “with n=219 and a discordant-pair proportion of ~8–10% (as observed), the paired McNemar test had only ≈ 46% power to detect even a four-percentage-point accuracy difference; reaching 80% power for a four-point difference would require roughly n≈500 patients, and detecting the differences actually observed (≤2 points) would require several thousand.”
 ---
 Execution Note: Make sure to restart the Jupyter kernel and run all cells in order (Run All) within each notebook so that global variables are instantiated correctly.
